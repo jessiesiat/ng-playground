@@ -1,0 +1,56 @@
+<h3>View & Templates</h3>
+
+<p>Angular view is a projection of the model through angular templates. That is when a model changes, Angular refreshes the binding points which will also updates the view.</p>
+
+<xmp class="prettyprint" ng-non-bindable>
+<!doctype html>
+<html ng-app="ngPlayground">
+<head>
+  ..
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.1/angular.min.js"></script>
+  <!-- will include js/controllers.js -->
+  <script src="js/controllers.js"></script>
+</head>
+<body ng-controller="UserCtrl">
+ 
+  <ul>
+    <li ng-repeat="user in users">
+      <strong>{{user.name}}</strong> - <em>{{ user.email }}</em>
+    </li>
+  </ul>
+ 
+</body>
+</html>
+</xmp>
+
+<p>In here we are using <code>ng-repeat</code> attribute which is an Angular <code>ngRepeat</code> directive. This is an Angular repeater which tell's Angular to create <code>li</code>element for each users in the list using the first <code>li</code> as the template.</p>
+
+<p>We have also an Angular expression wrap in curly braces <code ng-non-bindable>{{user.name}}</code> and <code ng-non-bindable>{{user.email}}</code>, this denotes binding. This expressions are referring to our application model which is set up in our controller, in this case <code>UserCtrl</code></p>
+
+<p>Our js/controllers.js</p>
+<xmp class="prettyprint" ng-non-bindable>
+var ngPlayground = angular.module('ngPlayground', []);
+ 
+ngPlayground.controller('UserCtrl', function ($scope) {
+	$scope.users = [
+		    {'name': 'John Doe',
+		     'email': 'johndoe@example.com',
+		 	 'happy': false,
+		 	 'age': 38 },
+		    {'name': 'Juan Dela Cruz',
+		     'email': 'juandelacruz@example.com',
+		 	 'happy': true, 
+		 	 'age': 25 }
+		  ];
+});
+</xmp>
+
+<p>We first create Angular module and name it <code>ngPlayground</code> as the name of our <code>ngApp</code> derective we have defined earlier. From it we have defined our controller, the first parameter is the name of the controller and the second is its definition. As you can see we passed in the <code>$scope</code> dependency, this is where we will attach our model attributes for it to be available to our view!</p>
+
+<hr />
+<strong>Result:</strong>
+<ul>
+   <li ng-repeat="user in users">
+    <strong>{{user.name}}</strong> - <em>{{user.email}}</em>
+   </li>
+</ul>

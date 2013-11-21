@@ -1,0 +1,9 @@
+Search: <input class="form-control" ng-model="name">
+<hr />
+<ul class="users">
+	<li ng-repeat="user in users | filter:name">
+		<a href="#/users/{{user.id}}">{{user.name}}</a>
+		<p><em>{{user.email}}</em></p>
+	</li>
+</ul>
+ 

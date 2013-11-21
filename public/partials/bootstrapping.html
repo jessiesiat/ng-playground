@@ -1,0 +1,25 @@
+<h3>Bootstraping</h3>
+<p>First of all will include the angularjs library at the bottom of the html page.</p>
+<xmp class="prettyprint"><script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.1/angular.min.js"></script></xmp>
+
+<p>To bootstrap the page will placed the <code>ng-app</code> attribute which represents Angular <code>ngApp</code> directive. Will name it <code>ngPlayground</code> so that we can reference it later on in our code.</p>
+<xmp class="prettyprint"><html ng-app="ngPlayground"></xmp>
+
+<p>We have placed it in our <code>html</code> element which means that the whole html page will be considered as Angular application. You can place it to any element if you want only portion of the page to be an Angular application.</p>
+<p>Our starter template would look something like this!</p>
+
+<xmp class="prettyprint" ng-non-bindable>
+<!doctype html>
+<html lang="en" ng-app="ngPlayground">
+<head>
+  <meta charset="utf-8">
+  <title>Ng Playground</title>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.1/angular.min.js"></script>
+</head>
+<body>
+ 
+  <p>{{'Templates here' + '!'}}</p>
+ 
+</body>
+</html>
+</xmp>

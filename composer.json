@@ -1,0 +1,23 @@
+{
+    "name": "jessiesiat/ng-playground",
+    "description": "",
+    "authors": [
+        {
+            "name": "Jessie Siat",
+            "email": "jcris.siat@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0",
+        "illuminate/support": "4.0.*"
+    },
+    "autoload": {
+        "classmap": [
+            "src/migrations"
+        ],
+        "psr-0": {
+            "Jessiesiat\\NgPlayground\\": "src/"
+        }
+    },
+    "minimum-stability": "dev"
+}

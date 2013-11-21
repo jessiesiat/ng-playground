@@ -1,0 +1,62 @@
+<h3>2-way Data Binding</h3>
+
+<p>Angular data binding works in such a way that when a model changes the corresponding view template updates. Or someone manipulates the dom that changes the model, the view updates.</p>
+
+<p>A good example is using filter to filter the data displayed in the view.</p>
+
+<p>Our view will look something like this.</p>
+<xmp class="prettyprint" ng-non-bindable>
+Sort by:
+<select ng-model="orderProp">
+  <option value="name">Alphabetical</option>
+  <option value="age">Age</option>
+</select>
+
+<ul>
+   <li ng-repeat="user in users | orderBy:orderProp">
+    <strong>{{ user.happy | expression }} {{user.name}}</strong> - <em>{{user.email}}</em> - {{user.age}} yrs. old
+   </li>
+</ul>
+</xmp>
+
+<p>And our controller, will default the <code>orderProp</code> to age.</p>
+<xmp class="prettyprint" ng-non-bindable>
+ngPlayground.controller('UserCtrl', function ($scope) {
+	$scope.users = [
+		    {'name': 'John Doe',
+		     'email': 'johndoe@example.com',
+		 	 'happy': false,
+		 	 'age': 38 },
+		    {'name': 'Juan Dela Cruz',
+		     'email': 'juandelacruz@example.com',
+		 	 'happy': true, 
+		 	 'age': 25 }
+		  ];
+	$scope.orderProp = 'age';
+});
+</xmp>
+
+<p>We initially set the <code>orderProp</code> model to age, now when the page loads it will sort the list by <em>Age</em> thats how the model updates the view. By the time user change the dom selection to <em>Alphabeticaly</em> it will update the model and then the view to filter alphabeticaly. Thats is data binding!</p>
+
+<hr />
+<strong>Result:</strong>
+Sort by:
+<select ng-model="orderProp">
+  <option value="name">Alphabetical</option>
+  <option value="age">Age</option>
+</select>
+
+<ul>
+   <li ng-repeat="user in users | orderBy:orderProp">
+    <strong>{{ user.happy | expression }} {{user.name}}</strong> - <em>{{user.email}}</em> - {{user.age}} yrs. old
+   </li>
+</ul>
+
+
+
+
+
+
+
+
+

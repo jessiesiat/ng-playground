@@ -1,0 +1,52 @@
+<h3>Custom Filters</h3>
+
+<p>To create a new filter, will create <code>ngFilters</code> module and from there will register our custom filter.</p>
+
+js/filters.js
+<xmp class="prettyprint" ng-non-bindable>
+var ngFilters = angular.module('ngFilters', []);
+
+ngFilters.filter('expression', function() {
+	return function(input) {
+		return input ? ':)' : ':(';
+	}
+});
+</xmp>
+
+<p>The name of our filter is <code>expression</code> and the function evaluates whether true or false, if true will return smiley face :) else frown :( face.</p>
+
+<h4>Template</h4>
+<p>Will also include our <code>js/filters.js</code> in our script tag</p>
+
+<xmp class="prettyprint" ng-non-bindable>
+..
+<script src="js/controllers.js"></script>
+<script src="js/filters.js"></script>
+...
+<body ng-controller="UserCtrl">
+<ul>
+   <li ng-repeat="user in users">
+    <strong>{{ user.happy | expression }} {{user.name}}</strong> - <em>{{user.email}}</em>
+   </li>
+</ul>
+</body>
+</xmp>
+
+<p>Now that our filter is ready will now include inject the <code>ngFilters</code> module as dependency to our main <code>ngPlayground</code> module.</p>
+
+<xmp class="prettyprint" ng-non-bindable>
+var ngPlayground = angular.module('ngPlayground', ['ngFilters']);
+</xmp>
+
+<p>There are built in filters of Angular just like <code>currency</code>, <code>uppercase</code>, <code>date</code>, <code>orderBy</code> etc. Feel free to <a href="http://docs.angularjs.org/api/ng.filter:filter" target="_blank">explore</a>!</p>
+
+<hr />
+<strong>Result:</strong>
+<ul>
+   <li ng-repeat="user in users">
+    <strong>{{ user.happy | expression }} {{user.name}}</strong> - <em>{{user.email}}</em>
+   </li>
+</ul>
+
+
+
