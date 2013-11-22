@@ -5,7 +5,7 @@ I placed also AngularJs tutorial you may want to learn!
 
 Through Composer! 
 
-`composer.json`
+Update your `composer.json` to something like this and run `composer update`.
 ```json
 {
 	"repositories": [
@@ -32,7 +32,7 @@ Next add the service provider in `app/config/app.php`.
 ),
 ```
 
-Publish the package assets to your public dir.
+Publish the package assets to your public directory.
 
 `php artisan asset:publish jessiesiat/ng-playground`
 
