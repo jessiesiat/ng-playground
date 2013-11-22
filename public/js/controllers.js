@@ -23,20 +23,14 @@ ngControllers.controller('NgTemplatesCtrl', ['$scope',
 		  $scope.orderProp = 'age';
 	}]);
 
-ngControllers.controller('UsersCtrl', ['$scope', '$http',
-	function ($scope, $http) {
-
-	  $http.get('ng/api/users').success(function(data) {
-	    $scope.users = data;
-	  });
-
+ngControllers.controller('UsersCtrl', ['$scope', '$http', 'User',
+	function ($scope, $http, User) {
+		$scope.users = User.query();
 	}]);
 
-ngControllers.controller('UserDetailsCtrl', ['$scope', '$routeParams', '$http',
-	function ($scope, $routeParams, $http) {
+ngControllers.controller('UserDetailsCtrl', ['$scope', '$routeParams', 'User',
+	function ($scope, $routeParams, User) {
 
-	  $http.get('ng/api/users/' + $routeParams.userId).success(function(data) {
-	    $scope.user = data;
-	  });
+		 $scope.user = User.get({userId: $routeParams.userId});
 
 	}]);

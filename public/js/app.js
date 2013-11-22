@@ -1,4 +1,4 @@
-var ngPlayground = angular.module('ngPlayground', ['ngRoute', 'ngControllers', 'ngFilters']);
+var ngPlayground = angular.module('ngPlayground', ['ngRoute', 'ngControllers', 'ngFilters', 'ngServices']);
 
 /*
 ngPlayground.config(['$interpolateProvider', function ($interpolateProvider) {

@@ -2,9 +2,9 @@
 
 var ngServices = angular.module('ngServices', ['ngResource']);
  
-ngServices.factory('Phone', ['$resource',
+ngServices.factory('User', ['$resource',
   function($resource){
-    return $resource('ng/phones/:phoneId', {}, {
-      query: {method:'GET', params:{phoneId:'ng/phones'}, isArray:true}
+    return $resource('ng/api/users/:userId', {}, {
+      query: {method:'GET', params:{userId:''}, isArray:true}
     });
   }]);
