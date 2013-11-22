@@ -41,3 +41,5 @@ Run the migration.
 `php artisan migrate --package="jessiesiat/ng-playgrount"`
 
 It will create `ng-users` table and dump some data.
+
+Thats it! View it in your browser by appending `/ng` to the URL of your site. (yoursite.com/ng)
