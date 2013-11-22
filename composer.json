@@ -1,6 +1,8 @@
 {
     "name": "jessiesiat/ng-playground",
-    "description": "",
+    "description": "Working package for learning AngularJs",
+    "keywords": ["angularjs", "laravel"],
+    "license": "MIT",
     "authors": [
         {
             "name": "Jessie Siat",
