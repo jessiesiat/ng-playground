@@ -2,7 +2,7 @@
 
 //routes goes here for jessiesiat/ng-playground
 
-Route::group(array('prefix' => 'ng'), function()
+Route::group(array('prefix' => 'ng-playground'), function()
 {
 	Route::get('/', function()
 	{
