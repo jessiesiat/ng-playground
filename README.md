@@ -42,4 +42,4 @@ Run the migration.
 
 It will create `ng-users` table and dump some data.
 
-Thats it! View it in your browser by appending `/ng` to the URL of your site. (yoursite.com/ng)
+Thats it! View it in your browser by appending `/ng-playground` to the URL of your site. (yoursite.com/ng-playground).
