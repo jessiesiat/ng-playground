@@ -37,9 +37,9 @@
             <a href="#/xhr-di" class="list-group-item">XHRs & Dependency Injection</a>
             <a href="#/routing-views" class="list-group-item">Routing and Multiple Views</a>
             <a href="#/event-handlers" class="list-group-item">Event Handlers</a>
-            <a href="#/chat-app" class="list-group-item">Chat App</a>
           </div>
           <div class="list-group">
+            <a href="#/chat-app" class="list-group-item">Chat App</a>
             <a href="#/users" class="list-group-item">Users</a>
             <a href="<?php echo URL::to('ng-playground/hello') ?>" class="list-group-item">Say Hello!</a>   
           </div>
