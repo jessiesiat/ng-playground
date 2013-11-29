@@ -37,10 +37,11 @@
             <a href="#/xhr-di" class="list-group-item">XHRs & Dependency Injection</a>
             <a href="#/routing-views" class="list-group-item">Routing and Multiple Views</a>
             <a href="#/event-handlers" class="list-group-item">Event Handlers</a>
+            <a href="#/chat-app" class="list-group-item">Chat App</a>
           </div>
           <div class="list-group">
             <a href="#/users" class="list-group-item">Users</a>
-            <a href="<?php echo URL::to('ng/hello') ?>" class="list-group-item">Say Hello!</a>   
+            <a href="<?php echo URL::to('ng-playground/hello') ?>" class="list-group-item">Say Hello!</a>   
           </div>
         </div>
         <div class="col-sm-8 col-md-9 col-lg-9">
@@ -55,6 +56,8 @@
    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
    <script type="text/javascript" src="//netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script> -->
    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.1/angular.min.js"></script>
+   <script src='https://cdn.firebase.com/v0/firebase.js'></script>
+   <script src='https://cdn.firebase.com/libs/angularfire/0.3.0/angularfire.min.js'></script>
    <script src="packages/jessiesiat/ng-playground/js/services.js"></script>
    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.1/angular-resource.min.js"></script>
    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.1/angular-route.min.js"></script>

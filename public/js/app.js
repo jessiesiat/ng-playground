@@ -1,4 +1,4 @@
-var ngPlayground = angular.module('ngPlayground', ['ngRoute', 'ngControllers', 'ngFilters', 'ngServices']);
+var ngPlayground = angular.module('ngPlayground', ['ngRoute', 'ngControllers', 'ngFilters', 'ngServices', 'firebase']);
 
 /*
 ngPlayground.config(['$interpolateProvider', function ($interpolateProvider) {
@@ -45,6 +45,10 @@ ngPlayground.config(['$routeProvider',
       when('/users/:userId', {
         templateUrl: 'packages/jessiesiat/ng-playground/partials/user-details.html',
         controller: 'UserDetailsCtrl'
+      }).
+      when('/chat-app', {
+        templateUrl: 'packages/jessiesiat/ng-playground/partials/chat-app.html',
+        controller: 'ChatCtrl'
       }).
       otherwise({
         redirectTo: '/'

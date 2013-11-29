@@ -34,3 +34,16 @@ ngControllers.controller('UserDetailsCtrl', ['$scope', '$routeParams', 'User',
 		 $scope.user = User.get({userId: $routeParams.userId});
 
 	}]);
+
+ngControllers.controller('ChatCtrl', ['$scope', 'angularFire',
+	function ($scope, angularFire) {
+		var ref = new Firebase("https://ng-playground.firebaseio.com/");
+        $scope.messages = [];
+        angularFire(ref, $scope, "messages");
+
+        $scope.addMessage = function(e) {
+          if (e.keyCode != 13) return;
+          $scope.messages.push({from: $scope.name, text: $scope.msg});
+          $scope.msg = "";
+        };
+	}]);
