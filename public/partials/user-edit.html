@@ -1,0 +1,24 @@
+<h3>Edit User Details</h3>
+
+<fieldset ng-disabled="submitted">
+<form name="editForm" ng-submit="saveDetails()">
+	<div class="form-group" ng-class="{'has-error': editForm.name.$invalid}">
+	    <label for="name">Name:</label>
+	    <input type="text" name="name" class="form-control" ng-model="user_details.name" placeholder="Name" required>
+	    <span ng-show="editForm.name.$error.required" class="help-block">Required</span>
+	</div>
+	<div class="form-group" ng-class="{'has-error': editForm.email.$invalid}">
+	    <label for="email">Email:</label>
+	    <input type="email" name="email" class="form-control" ng-model="user_details.email" placeholder="Email" required>
+	    <span ng-show="editForm.email.$error.email" class="help-block">Not a valid email address!</span>
+	    <span ng-show="editForm.email.$error.required" class="help-block">Required</span>
+	</div>
+	<div class="form-group">
+	    <label for="about">About:</label>
+	    <textarea name="about" class="form-control" rows="3" ng-model="user_details.about"></textarea>
+	</div>
+	<button type="submit" ng-disabled="editForm.$invalid" class="btn btn-primary">Save Changes</button>
+	&nbsp;&nbsp;&nbsp;or&nbsp;&nbsp;&nbsp;
+	<a href="#/users">Cancel</a>
+</form>
+</fieldset>

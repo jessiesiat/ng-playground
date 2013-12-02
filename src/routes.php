@@ -67,4 +67,15 @@ Route::group(array('prefix' => 'ng/api'), function()
 
 		return $user->find($id)->toJson();
 	});
+
+	Route::post('users/{id}', function($id) 
+	{
+		$user = Jessiesiat\NgPlayground\Models\NgUser::find($id);
+		$user->name = Input::get('name');	
+		$user->email = Input::get('email');
+		$user->about = Input::get('about');
+		$user->save();
+
+		return $user->toJson();
+	});
 });

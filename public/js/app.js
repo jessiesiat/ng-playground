@@ -46,6 +46,10 @@ ngPlayground.config(['$routeProvider',
         templateUrl: 'packages/jessiesiat/ng-playground/partials/user-details.html',
         controller: 'UserDetailsCtrl'
       }).
+      when('/users/:userId/edit', {
+        templateUrl: 'packages/jessiesiat/ng-playground/partials/user-edit.html',
+        controller: 'UserEditCtrl'
+      }).
       when('/chat-app', {
         templateUrl: 'packages/jessiesiat/ng-playground/partials/chat-app.html',
         controller: 'ChatCtrl'

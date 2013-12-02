@@ -53,8 +53,8 @@
 	  </div>
    </body>
    <!--
-   <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
-   <script type="text/javascript" src="//netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script> -->
+   <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>   
+   <script type="text/javascript" src="//netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>-->
    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.1/angular.min.js"></script>
    <script src='https://cdn.firebase.com/v0/firebase.js'></script>
    <script src='https://cdn.firebase.com/libs/angularfire/0.3.0/angularfire.min.js'></script>

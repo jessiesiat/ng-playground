@@ -35,6 +35,25 @@ ngControllers.controller('UserDetailsCtrl', ['$scope', '$routeParams', 'User',
 
 	}]);
 
+ngControllers.controller('UserEditCtrl', ['$scope', '$routeParams', '$location', 'User',
+	function ($scope, $routeParams, $location, User) {
+
+		 var user = User.get({userId: $routeParams.userId});
+
+		 $scope.user_details = user;
+
+		 $scope.saveDetails = function() {
+		 	$scope.submitted = true;
+		 	user.name = $scope.user_details.name;
+		 	user.email = $scope.user_details.email;
+		 	user.about = $scope.user_details.about;
+		 	user.$save(function(u, putResponseHeaders) {
+		 		$location.path('/users/' + user.id);
+			  });
+		 }
+
+	}]);
+
 ngControllers.controller('ChatCtrl', ['$scope', 'angularFire',
 	function ($scope, angularFire) {
 		var ref = new Firebase("https://ng-playground.firebaseio.com/");
